@@ -4,7 +4,7 @@
   <artifactId>doctor-fis</artifactId>
   <version>0.0.1</version>
   <name>Doctor FIS</name>
-  
+  <url>https://andreacimminoarriaga.github.io/doctor-fis/</url>
   	<properties>
 		<maven.compiler.target>11</maven.compiler.target>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -40,11 +40,7 @@
 	    <version>5.2.1</version>
 	</dependency>
 
-	<dependency>
-		<groupId>com.github.mpkorstanje</groupId>
-		<artifactId>simmetrics-core</artifactId>
-		<version>4.1.0</version>
-	</dependency>
+	
 		 		
 		 		
 	<!-- https://mvnrepository.com/artifact/org.javatuples/javatuples -->

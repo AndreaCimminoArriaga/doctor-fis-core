@@ -21,9 +21,6 @@ import org.apache.hc.core5.http.ContentType;
 import org.apache.jena.ext.com.google.common.collect.Maps;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
-import org.simmetrics.StringMetric;
-import org.simmetrics.metrics.StringMetrics;
-
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
