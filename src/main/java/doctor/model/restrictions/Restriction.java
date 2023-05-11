@@ -6,6 +6,11 @@ import org.apache.jena.rdf.model.Model;
 
 import doctor.model.report.ReportEntry;
 
+/**
+ * 
+ * @author andreacimmino
+ *
+ */
 public interface Restriction {
 
 	
