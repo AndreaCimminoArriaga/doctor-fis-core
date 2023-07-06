@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.andreacimminoarriaga</groupId>
   <artifactId>doctor-fis</artifactId>
-  <version>0.1.3</version>
+  <version>0.1.4</version>
   <name>Doctor FIS</name>
   <description>Doctor FIS is a project to automatically correct Software Engineering assignments</description>
   <url>https://andreacimminoarriaga.github.io/doctor-fis/</url>

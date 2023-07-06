@@ -25,14 +25,39 @@ public class Helio {
 	private static  String mappingElements = "./cmp/ElementsDoctorFis.ftl";
 	private static  String mappingModel = "./cmp/ModelDoctorFis.ftl";
 	
-	static {
+	private static String urlProviderJar = "./cmp/helio-provider-url-0.1.0.jar";
+	private static String urlActionJsonCastJar = "./cmp/helio-action-json-cast-0.1.0.jar";
+	
+	
+	
+	
+	public static String getUrlProviderJar() {
+		return urlProviderJar;
+	}
+
+
+	public static void setUrlProviderJar(String urlProviderJar) {
+		Helio.urlProviderJar = urlProviderJar;
+	}
+
+
+	public static String getUrlActionJsonCastJar() {
+		return urlActionJsonCastJar;
+	}
+
+
+	public static void setUrlActionJsonCastJar(String urlActionJsonCastJar) {
+		Helio.urlActionJsonCastJar = urlActionJsonCastJar;
+	}
+
+
+	public static void loadExternalComponents(){
 		try {
-			Components.registerAndLoad("./cmp/helio-provider-url-0.1.0.jar", "provider.URLProvider", ComponentType.PROVIDER);
-			Components.registerAndLoad("./cmp/helio-action-json-cast-0.1.0.jar", "helio.actions.JsonCast", ComponentType.ACTION);
+			Components.registerAndLoad(urlProviderJar, "provider.URLProvider", ComponentType.PROVIDER);
+			Components.registerAndLoad(urlActionJsonCastJar, "helio.actions.JsonCast", ComponentType.ACTION);
 		} catch (ExtensionNotFoundException e) {
 			e.printStackTrace();
 		}
-
 	}
 	
 
