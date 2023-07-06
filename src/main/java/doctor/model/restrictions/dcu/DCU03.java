@@ -20,25 +20,27 @@ import doctor.model.restrictions.SparqlRestriction;
 
 public class DCU03 extends SparqlRestriction {
 
+//	  PREFIX urn: <http://upm.es/doctor-fis/resource/> PREFIX dcf:
+//	  <http://upm.es/doctor-fis/1.1/voc#> PREFIX uml: <http://upm.es/uml/1.1/voc#>
+//	  PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+//	  
+//	  SELECT distinct ?sourceName ?targetName ?otherRelationship WHERE {
+//	  
+//	  ?relationship a dcf:UseCaseIncludes . ?relationship dcf:hasSourceElement
+//	  ?source . ?source dcf:name ?sourceName . ?source dcf:hasRelationship
+//	  ?otherRelationship . MINUS {?otherRelationship a dcf:UseCaseAssociation . }
+//	  ?relationship dcf:hasTargetElement ?target . ?target dcf:name ?targetName .
+//	  
+//	  
+//	  FILTER (?otherRelationship != ?relationship)
+//	  
+//	  }
+//	 
+	
 	// TODO:
 	/**
 	 * Todas las relaciones includes deben tener un UC principal que tenga una
-	 * asociacion PREFIX urn: <http://upm.es/doctor-fis/resource/> PREFIX dcf:
-	 * <http://upm.es/doctor-fis/1.1/voc#> PREFIX uml: <http://upm.es/uml/1.1/voc#>
-	 * PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-	 * 
-	 * SELECT distinct ?sourceName ?targetName ?otherRelationship WHERE {
-	 * 
-	 * ?relationship a dcf:UseCaseIncludes . ?relationship dcf:hasSourceElement
-	 * ?source . ?source dcf:name ?sourceName . ?source dcf:hasRelationship
-	 * ?otherRelationship . MINUS {?otherRelationship a dcf:UseCaseAssociation . }
-	 * ?relationship dcf:hasTargetElement ?target . ?target dcf:name ?targetName .
-	 * 
-	 * 
-	 * FILTER (?otherRelationship != ?relationship)
-	 * 
-	 * }
-	 ** 
+	 * asociacion 
 	 * Todas las relaciones extend deben tener un UC principal que tenga una
 	 * asociacion Todos los casos de uso deben tener una asociacion con un actor
 	 */

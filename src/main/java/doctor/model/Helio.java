@@ -21,9 +21,10 @@ import helio.builder.siot.rx.SIoTRxBuilder;
 public class Helio {
 
 	private static ExecutorService service = Executors.newScheduledThreadPool(10);
-	private static final String MAPPING_MODEL = "./cmp/ConnectorsDoctorFis.ftl";
-	private static final String MAPPING_ELEMENTS = "./cmp/ElementsDoctorFis.ftl";
-	private static final String MAPPING_CONNECTORS = "./cmp/ModelDoctorFis.ftl";
+	private static  String mappingConnectors = "./cmp/ConnectorsDoctorFis.ftl";
+	private static  String mappingElements = "./cmp/ElementsDoctorFis.ftl";
+	private static  String mappingModel = "./cmp/ModelDoctorFis.ftl";
+	
 	static {
 		try {
 			Components.registerAndLoad("./cmp/helio-provider-url-0.1.0.jar", "provider.URLProvider", ComponentType.PROVIDER);
@@ -34,6 +35,37 @@ public class Helio {
 
 	}
 	
+
+	public static String getMappingConnectors() {
+		return mappingConnectors;
+	}
+
+
+	public static void setMappingConnectors(String mappingConnectors) {
+		Helio.mappingConnectors = mappingConnectors;
+	}
+
+
+	public static String getMappingElements() {
+		return mappingElements;
+	}
+
+
+	public static void setMappingElements(String mappingElements) {
+		Helio.mappingElements = mappingElements;
+	}
+
+
+	public static String getMappingModel() {
+		return mappingModel;
+	}
+
+
+	public static void setMappingModel(String mappingModel) {
+		Helio.mappingModel = mappingModel;
+	}
+
+
 	public static Model toRDF(String uml) {
 		Model model = ModelFactory.createDefaultModel();
 		Map<String,Object> localVariables = Maps.newHashMap();
@@ -41,9 +73,9 @@ public class Helio {
 		
 		UnitBuilder builder = new SIoTRxBuilder();
 		try {
-			Set<TranslationUnit> list = builder.parseMapping(Utils.readFile(MAPPING_MODEL));
-			list.addAll(builder.parseMapping(Utils.readFile(MAPPING_ELEMENTS)));
-			list.addAll(builder.parseMapping(Utils.readFile(MAPPING_CONNECTORS)));
+			Set<TranslationUnit> list = builder.parseMapping(Utils.readFile(mappingConnectors));
+			list.addAll(builder.parseMapping(Utils.readFile(mappingElements)));
+			list.addAll(builder.parseMapping(Utils.readFile(mappingModel)));
 //			list.stream().map(unit -> processUnit(unit, localVariables))
 //			                     .forEach(result ->  System.out.println(result));
 			list.stream().map(unit -> processUnit(unit, localVariables))

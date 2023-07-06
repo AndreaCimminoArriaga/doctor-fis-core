@@ -6,26 +6,27 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
 import java.io.Writer;
+import java.util.List;
 
 import org.apache.jena.rdf.model.Model;
 
 import doctor.model.Helio;
+import doctor.model.report.Level;
+import doctor.model.report.ReportEntry;
 
 public class MainLoader {
 	
 	public static void main(String[] args) throws IOException {
-		String fileAddr = "/Users/andreacimmino/Desktop/iwsit21-02.xml"; 
+		String fileAddr = "/Users/andreacimmino/ownCloud/FIS/wetransfer_project-xml_2023-02-27_0843/UPMFit_XMI2.1.xml"; 
 		String uml = Utils.readFile(fileAddr);
-		Model model = Helio.toRDF(uml);
-		Writer w = new StringWriter();
-		 model.write(w, "turtle");
-		String data = w.toString();
-		w.close();
-		FileWriter f = new FileWriter(new File("/Users/andreacimmino/Desktop/iwsit21-02.ttl"));
-		f.write(data);
-		f.flush();
-		f.close();
-		System.exit(-1);
+		DoctorFIS doc = DoctorFisImpl.create();
+		
+		List<ReportEntry> entries = doc.computeDCURestrictions(uml);
+		
+		entries.stream().forEach(elem -> System.out.println(elem.getId()+" "+elem.getMessages().get(Level.HINT)));
+		
+		
+		
 	}
 	
 	
