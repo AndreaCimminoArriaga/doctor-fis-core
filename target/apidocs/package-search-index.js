@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"doctor"},{"l":"doctor.model"},{"l":"doctor.model.report"},{"l":"doctor.model.restrictions"},{"l":"doctor.model.restrictions.dc"},{"l":"doctor.model.restrictions.dcu"}]

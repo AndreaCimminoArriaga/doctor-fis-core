@@ -76,7 +76,12 @@ public class DoctorFisImpl implements DoctorFIS {
 		List<ReportEntry> entries = Lists.newArrayList();
 		for (int index = 0; index < restrictionsDC.size(); index++) {
 			Restriction res = restrictionsDC.get(index);
-			res.evaluate(model).forEach(elem -> entries.add(elem) );
+
+			try {
+				entries.addAll(res.evaluate(model));
+			}catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
 		}
 		return entries;
 	}
@@ -87,7 +92,11 @@ public class DoctorFisImpl implements DoctorFIS {
 		List<ReportEntry> entries = Lists.newArrayList();
 		for (int index = 0; index < restrictionsDCU.size(); index++) {
 			Restriction res = restrictionsDCU.get(index);
-			res.evaluate(model).forEach(elem -> entries.add(elem) );
+			try {
+				entries.addAll(res.evaluate(model));
+			}catch(Exception e) {
+				System.out.println(e.getMessage());
+			}
 		}
 		return entries;
 	}

@@ -3,7 +3,7 @@
 @prefix uml: <http://upm.es/uml/1.1/voc#> .
 @prefix urn: <http://upm.es/doctor-fis/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-<#assign packaged = json?eval['xmi:XMI']['uml:Model']['packagedElement']['packagedElement']>
+<#assign packaged = json?replace("\\","")?eval['xmi:XMI']['uml:Model']['packagedElement']['packagedElement']>
 <#if packaged?is_sequence >
  <#list packaged as json>
  <@printPackagedElement data=json parent="None" vis="1"/>

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.jena.rdf.model.Model;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import doctor.Utils;
@@ -22,14 +23,20 @@ import doctor.model.restrictions.dc.DC12;
 import doctor.model.restrictions.dc.DC13;
 import doctor.model.restrictions.dc.DC13a;
 import doctor.model.restrictions.dcu.DCU02;
+import helio.blueprints.components.Components;
 
 public class TestDC {
-
+	
+	@Before
+	public void setup() {
+	     Helio.loadExternalComponents(); 
+	}
 	
 	@Test
 	public void testDC01() {
 		String uml = Utils.readFile("./src/test/resources/19242.xml");
 		Model model = Helio.toRDF(uml);
+		model.write(System.out, "Turtle");
 		List<ReportEntry> entries = (new DC01()).evaluate(model);
 		Assert.assertTrue(entries.size()==1 && entries.get(0).getId().equals("DC-01"));
 	}

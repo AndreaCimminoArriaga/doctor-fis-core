@@ -71,7 +71,7 @@ public class Utils {
 	        .returnContent().asString();
 			
 		}catch(Exception e) {
-			e.printStackTrace();
+			System.out.println(link+" "+e.getMessage());
 		}
 		return result;
 	}

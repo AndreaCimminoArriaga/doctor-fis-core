@@ -5,7 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-<#assign elements = json?eval['xmi:XMI']['xmi:Extension'].elements.element>
+<#assign elements = json?replace("\\","")?eval['xmi:XMI']['xmi:Extension'].elements.element>
 <#if elements?is_sequence >
  <#list elements as json>
  <@printElement element=json />

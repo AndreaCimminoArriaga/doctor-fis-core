@@ -1,0 +1,108 @@
+@options
+@packages
+-classpath
+'/Users/andreacimmino/.m2/repository/org/apache/jena/apache-jena-libs/4.7.0/apache-jena-libs-4.7.0.pom:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-rdfpatch/4.7.0/jena-rdfpatch-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-arq/4.7.0/jena-arq-4.7.0.jar:/Users/andreacimmino/.m2/repository/com/github/jsonld-java/jsonld-java/0.13.4/jsonld-java-0.13.4.jar:/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.5.13/httpclient-cache-4.5.13.jar:/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/andreacimmino/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.36/jcl-over-slf4j-1.7.36.jar:/Users/andreacimmino/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar:/Users/andreacimmino/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar:/Users/andreacimmino/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar:/Users/andreacimmino/.m2/repository/com/apicatalog/titanium-json-ld/1.3.1/titanium-json-ld-1.3.1.jar:/Users/andreacimmino/.m2/repository/org/glassfish/jakarta.json/2.0.1/jakarta.json-2.0.1.jar:/Users/andreacimmino/.m2/repository/com/google/protobuf/protobuf-java/3.21.10/protobuf-java-3.21.10.jar:/Users/andreacimmino/.m2/repository/org/apache/thrift/libthrift/0.17.0/libthrift-0.17.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-shacl/4.7.0/jena-shacl-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-shex/4.7.0/jena-shex-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-tdb/4.7.0/jena-tdb-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-tdb2/4.7.0/jena-tdb2-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-storage/4.7.0/jena-dboe-storage-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-trans-data/4.7.0/jena-dboe-trans-data-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-transaction/4.7.0/jena-dboe-transaction-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-base/4.7.0/jena-dboe-base-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-index/4.7.0/jena-dboe-index-4.7.0.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-rdfconnection/4.7.0/jena-rdfconnection-4.7.0.jar:/Users/andreacimmino/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/andreacimmino/.m2/repository/io/github/helio-ecosystem/helio-builder-siot/0.1.10/helio-builder-siot-0.1.10.jar:/Users/andreacimmino/.m2/repository/io/github/helio-ecosystem/helio-blueprints/0.4.26/helio-blueprints-0.4.26.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-core/4.6.1/jena-core-4.6.1.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-base/4.6.1/jena-base-4.6.1.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-shaded-guava/4.6.1/jena-shaded-guava-4.6.1.jar:/Users/andreacimmino/.m2/repository/org/apache/commons/commons-csv/1.9.0/commons-csv-1.9.0.jar:/Users/andreacimmino/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/Users/andreacimmino/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/andreacimmino/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/andreacimmino/.m2/repository/com/github/andrewoma/dexx/collection/0.7/collection-0.7.jar:/Users/andreacimmino/.m2/repository/org/apache/jena/jena-iri/4.6.1/jena-iri-4.6.1.jar:/Users/andreacimmino/.m2/repository/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.jar:/Users/andreacimmino/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/andreacimmino/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.4/rxjava-3.1.4.jar:/Users/andreacimmino/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/Users/andreacimmino/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/Users/andreacimmino/.m2/repository/org/slf4j/slf4j-simple/1.6.1/slf4j-simple-1.6.1.jar:/Users/andreacimmino/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/andreacimmino/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/andreacimmino/.m2/repository/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar:/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/client5/httpclient5-fluent/5.2.1/httpclient5-fluent-5.2.1.jar:/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar:/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar:/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar:/Users/andreacimmino/.m2/repository/org/javatuples/javatuples/1.2/javatuples-1.2.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+11
+-sourcepath
+'/Users/andreacimmino/Desktop/Lab/doctor-fis/src/main/java:/Users/andreacimmino/Desktop/Lab/doctor-fis/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Doctor FIS 0.1.6 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' '/Users/andreacimmino/Desktop/Lab/doctor-fis/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Doctor FIS 0.1.6 API'
+doctor
+doctor.model
+doctor.model.restrictions
+doctor.model.restrictions.dcu
+doctor.model.restrictions.dc
+doctor.model.report
+/Users/andreacimmino/.m2/repository/org/apache/jena/apache-jena-libs/4.7.0/apache-jena-libs-4.7.0.pom = 1678101758272
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-rdfpatch/4.7.0/jena-rdfpatch-4.7.0.jar = 1678101759234
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-arq/4.7.0/jena-arq-4.7.0.jar = 1673360592121
+/Users/andreacimmino/.m2/repository/com/github/jsonld-java/jsonld-java/0.13.4/jsonld-java-0.13.4.jar = 1644873179486
+/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/httpclient-cache/4.5.13/httpclient-cache-4.5.13.jar = 1638287323721
+/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar = 1638287323038
+/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar = 1638287322865
+/Users/andreacimmino/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.36/jcl-over-slf4j-1.7.36.jar = 1652189066141
+/Users/andreacimmino/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.14.1/jackson-core-2.14.1.jar = 1673360591691
+/Users/andreacimmino/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.14.1/jackson-databind-2.14.1.jar = 1673360591798
+/Users/andreacimmino/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.14.1/jackson-annotations-2.14.1.jar = 1673360591659
+/Users/andreacimmino/.m2/repository/com/apicatalog/titanium-json-ld/1.3.1/titanium-json-ld-1.3.1.jar = 1673360591809
+/Users/andreacimmino/.m2/repository/org/glassfish/jakarta.json/2.0.1/jakarta.json-2.0.1.jar = 1638287323675
+/Users/andreacimmino/.m2/repository/com/google/protobuf/protobuf-java/3.21.10/protobuf-java-3.21.10.jar = 1673360591894
+/Users/andreacimmino/.m2/repository/org/apache/thrift/libthrift/0.17.0/libthrift-0.17.0.jar = 1673360592028
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-shacl/4.7.0/jena-shacl-4.7.0.jar = 1673360591820
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-shex/4.7.0/jena-shex-4.7.0.jar = 1678101759330
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-tdb/4.7.0/jena-tdb-4.7.0.jar = 1678101759383
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-tdb2/4.7.0/jena-tdb2-4.7.0.jar = 1678101759333
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-storage/4.7.0/jena-dboe-storage-4.7.0.jar = 1678101759265
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-trans-data/4.7.0/jena-dboe-trans-data-4.7.0.jar = 1678101759351
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-transaction/4.7.0/jena-dboe-transaction-4.7.0.jar = 1678101759376
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-base/4.7.0/jena-dboe-base-4.7.0.jar = 1678101759434
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-dboe-index/4.7.0/jena-dboe-index-4.7.0.jar = 1678101759399
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-rdfconnection/4.7.0/jena-rdfconnection-4.7.0.jar = 1678101759415
+/Users/andreacimmino/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar = 1678111666974
+/Users/andreacimmino/.m2/repository/io/github/helio-ecosystem/helio-builder-siot/0.1.10/helio-builder-siot-0.1.10.jar = 1666192109724
+/Users/andreacimmino/.m2/repository/io/github/helio-ecosystem/helio-blueprints/0.4.26/helio-blueprints-0.4.26.jar = 1663075533323
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-core/4.6.1/jena-core-4.6.1.jar = 1663075483206
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-base/4.6.1/jena-base-4.6.1.jar = 1663075482980
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-shaded-guava/4.6.1/jena-shaded-guava-4.6.1.jar = 1663075483367
+/Users/andreacimmino/.m2/repository/org/apache/commons/commons-csv/1.9.0/commons-csv-1.9.0.jar = 1638287321397
+/Users/andreacimmino/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar = 1647545407481
+/Users/andreacimmino/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar = 1636097523634
+/Users/andreacimmino/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar = 1638287322238
+/Users/andreacimmino/.m2/repository/com/github/andrewoma/dexx/collection/0.7/collection-0.7.jar = 1636097390964
+/Users/andreacimmino/.m2/repository/org/apache/jena/jena-iri/4.6.1/jena-iri-4.6.1.jar = 1663075483064
+/Users/andreacimmino/.m2/repository/commons-cli/commons-cli/1.5.0/commons-cli-1.5.0.jar = 1641393761837
+/Users/andreacimmino/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar = 1636981768465
+/Users/andreacimmino/.m2/repository/io/reactivex/rxjava3/rxjava/3.1.4/rxjava-3.1.4.jar = 1649168668168
+/Users/andreacimmino/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar = 1641301820456
+/Users/andreacimmino/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar = 1642090654168
+/Users/andreacimmino/.m2/repository/org/slf4j/slf4j-simple/1.6.1/slf4j-simple-1.6.1.jar = 1642090654174
+/Users/andreacimmino/.m2/repository/junit/junit/4.11/junit-4.11.jar = 1636097392942
+/Users/andreacimmino/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar = 1636097392918
+/Users/andreacimmino/.m2/repository/org/freemarker/freemarker/2.3.31/freemarker-2.3.31.jar = 1648634312000
+/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/client5/httpclient5-fluent/5.2.1/httpclient5-fluent-5.2.1.jar = 1678196898641
+/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/client5/httpclient5/5.2.1/httpclient5-5.2.1.jar = 1678196898737
+/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/core5/httpcore5/5.2/httpcore5-5.2.jar = 1678196898750
+/Users/andreacimmino/.m2/repository/org/apache/httpcomponents/core5/httpcore5-h2/5.2/httpcore5-h2-5.2.jar = 1678196898711
+/Users/andreacimmino/.m2/repository/org/javatuples/javatuples/1.2/javatuples-1.2.jar = 1636367123080
+/Users/andreacimmino/Desktop/Lab/doctor-fis/src/main/java/.DS_Store = 1686218561219
+/Users/andreacimmino/Desktop/Lab/doctor-fis/src/main/java = 1686218561219
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/generated-sources/annotations = 1699885205902
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/constant-values.html = 1699885211992
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/member-search-index.zip = 1699885212126
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/overview-tree.html = 1699885212093
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/index.html = 1699885212154
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/package-search-index.js = 1699885212120
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/package-search-index.zip = 1699885212123
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/type-search-index.zip = 1699885212124
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/index-all.html = 1699885212127
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/allpackages-index.html = 1699885212134
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/deprecated-list.html = 1699885212138
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/member-search-index.js = 1699885212125
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/allclasses.html = 1699885212139
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/script.js = 1699885212161
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/stylesheet.css = 1699885212161
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/overview-summary.html = 1699885212156
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/help-doc.html = 1699885212159
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/element-list = 1699885211958
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/allclasses-index.html = 1699885212133
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/type-search-index.js = 1699885212124
+/Users/andreacimmino/Desktop/Lab/doctor-fis/target/apidocs/search.js = 1699885212163

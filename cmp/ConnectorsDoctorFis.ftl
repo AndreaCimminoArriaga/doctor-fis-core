@@ -4,7 +4,7 @@
 @prefix dcf: <http://upm.es/doctor-fis/1.1/voc#> .
 @prefix urn: <http://upm.es/doctor-fis/resource/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-<#list json?eval['xmi:XMI']['xmi:Extension'].connectors.connector as json >
+<#list json?replace("\\","")?eval['xmi:XMI']['xmi:Extension'].connectors.connector as json >
  <@printConnector connector=json />
 </#list>
 </@>
