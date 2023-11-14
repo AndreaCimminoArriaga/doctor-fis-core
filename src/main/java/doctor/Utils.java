@@ -66,20 +66,21 @@ public class Utils {
 	public static String makePost(String link, String body) {
 		String result=null;
 		try {
-			result = Request.post(link).bodyString(body, ContentType.APPLICATION_JSON)
+			result = Request.post(link).addHeader("Accept", "application/json").bodyString(body, ContentType.APPLICATION_JSON)
 	        .execute()
 	        .returnContent().asString();
 			
 		}catch(Exception e) {
+			
 			System.out.println(link+" "+e.getMessage());
 		}
 		return result;
 	}
 	
 	public static boolean isSingular(String word) {
-		boolean isSingular = true;
+		boolean isSingular = true; 
 		String body = "{ \"filter\": [ ], \"form\": \"LEMMA\", \"lang\": \"es\", \"multigrams\": false, \"text\": \""+word.toLowerCase()+"\" }";
-		String raw = Utils.makePost("http://librairy.linkeddata.es/nlp/annotations", body);
+		String raw = Utils.makePost("https://librairy.linkeddata.es/nlp/annotations", body);
 		isSingular = raw!=null;
 		if(isSingular) {
 		    JsonObject object = (new Gson()).fromJson(raw, JsonObject.class);
@@ -103,7 +104,7 @@ public class Utils {
 	public static String getSingular(String word) {
 		boolean isSingular = true;
 		String body = "{ \"filter\": [ ], \"form\": \"LEMMA\", \"lang\": \"es\", \"multigrams\": false, \"text\": \""+word.toLowerCase()+"\" }";
-		String raw = Utils.makePost("http://librairy.linkeddata.es/nlp/annotations", body);
+		String raw = Utils.makePost("https://librairy.linkeddata.es/nlp/annotations", body);
 		isSingular = raw!=null;
 		String singular = word;
 		if(isSingular) {
